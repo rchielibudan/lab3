@@ -16,10 +16,6 @@ class Pages extends BaseController
             throw new PageNotFoundException($page);
         }
 
-        $data['title'] = ucfirst($page); // Capitalize the first letter
-
-        return view('templates/header', $data)
-            . view('pages/' . $page)
-            . view('templates/footer');
+       echo view('pages/' . $page);
     }
 }
